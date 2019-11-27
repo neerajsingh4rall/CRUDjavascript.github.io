@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheet/main.css">
+    <script src="https://kit.fontawesome.com/b06605e970.js"></script>
+    <script src="assets/js/model/operation.js"></script>
+    <script src="assets/js/model/bookoperation.js"></script>
+    <script src="assets/js/controller/ctrl.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="row">
+                <div class="heading">
+                    <h1 class="alert-danger">my book list</h1>
+                </div>
+                <div class="main_box">
+                    <div class="box">
+
+                        <div class="form-group">
+
+                            <label>book id</label>
+
+                            <input class="form-control" id="id" type="text" placeholder="Enter Book Id No">
+
+                        </div>
+                        <div class="form-group">
+
+                            <label>title</label>
+
+                            <input class="form-control" id="title" type="text" placeholder="Enter  Title">
+
+                        </div>
+                        <div class="form-group">
+
+                            <label>author</label>
+
+                            <input class="form-control" id="auth" type="text" placeholder="Enter Author Name">
+
+                        </div>
+                        <div class="form-group">
+
+                            <label>isbn#</label>
+
+                            <input class="form-control" id="isbn" type="text" placeholder="Enter ISBN# No">
+
+                        </div>
+
+
+                    </div>
+                    <div class="form-group box_1">
+                        <button id="add" class="btn btn-primary">Add</button>
+                        <button id="delete" class="btn btn-danger">Delete</button>
+                        <button id="search" class="btn btn-info">Search</button>
+                        <button id="update" class="btn btn-secondary">Update</button>
+                        <button id="save" class="btn btn-primary">Save</button>
+                        <button id="load" class="btn btn-success">Load</button>
+                        <button id="clear" class="btn btn-primary">Clear All</button>
+                        <button id="sort" class="btn btn-info">Sort</button>
+                    </div>
+                    <div id="sortbox">
+                        sort by : 
+                        <button type="button" id="hToL">High to Low</button>
+                        <button type="button" id="lToH">Low to High</button>
+                    </div>
+                    <div id="searchbox">
+                        <select id="searchby">
+                            search by : 
+                            <option value="-1">Select</option>
+                            <option value="title">By Title</option>
+                            <option value="id">By Book id</option>
+                        </select>
+                        <input type="text" id="srchvalue" placeholder="Search Here">
+                    </div>
+                    <span>Total number of books added</span>
+                    <div id="len"></div>
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>book id</th>
+                                <th>title</th>
+                                <th>author</th>
+                                <th>isbn# </th>
+                                <th>Operations</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="booktbl">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
